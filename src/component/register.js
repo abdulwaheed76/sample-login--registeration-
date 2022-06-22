@@ -75,15 +75,15 @@ export default function Register() {
                         <div className='card-body'>
 
                             <form onSubmit={handleSubmit}>
-                                <input type="text" className="form-control" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Name" />
+                                <input type="text" className="form-control" value={userName} onChange={(e) => setUserName(e.target.value)} placeholder="Name" required />
 
-                                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+                                <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
 
-                                <input type="date" className="form-control" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Age" />
+                                <input type="date" className="form-control" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Age" required/>
 
-                                <input type="number" className="form-control" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Phone Number" />
+                                <input type="number" className="form-control" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Phone Number" required/>
 
-                                <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+                                <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required/>
 
                                 <input className='form-control btn btn-outline-success ' type="submit" value="Register" />
 

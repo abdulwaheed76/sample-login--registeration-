@@ -53,9 +53,9 @@ export default function Login() {
               <div className='card-body'>
 
                 <form onSubmit={handleSubmit}>
-                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+                  <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
 
-                  <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+                  <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required/>
 
                   <input className='form-control btn btn-outline-success ' type="submit" value="Login" />
 
