@@ -5,6 +5,7 @@ export default function Detail() {
   const user = useSelector((user) => user)
   const navigateTo = useNavigate()
   const [flag, setFlag] = useState(false)
+  
   useEffect(() => {
     const loginFlag = localStorage.getItem('loginFlag')
     if (loginFlag == 'true') {
@@ -18,6 +19,7 @@ export default function Detail() {
     <>{flag ?
       <div className='row'>
         <div className='col-md-4 offset-md-4'>
+          <h2>User Detail</h2>
           <table className="table table-bordered">
             <thead>
               <tr>

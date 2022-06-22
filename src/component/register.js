@@ -16,19 +16,19 @@ export default function Register() {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(!userName.match(/^[a-zA-Z'-]+$/) ){
+        if(!userName.match(/^[a-zA-Z0-9_ ]*$/) ){
             toast('Invalid Name',{
                 position:toast.POSITION.TOP_CENTER,
                 autoClose:1000
               })
         }
-        if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+        else if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
             toast('Invalid Email address',{
                 position:toast.POSITION.TOP_CENTER,
                 autoClose:1000
               })
         }
-        if(!phoneNumber.match(/^[0-9]+$/) ){
+        else if(!phoneNumber.match(/^[0-9]+$/) ){
             toast('Invalid phone number',{
                 position:toast.POSITION.TOP_CENTER,
                 autoClose:1000
