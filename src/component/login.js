@@ -9,11 +9,10 @@ export default function Login() {
   const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    // fetching from local storage
     var l_email = localStorage.getItem("Email").replace(/"/g, "")
     var l_password = localStorage.getItem("Password").replace(/"/g, "")
-    console.log(l_email)
-    console.log(l_password)
+    // login validation
     if (l_email == email && l_password == password) {
       toast('Loging in', {
         position: toast.POSITION.TOP_CENTER,

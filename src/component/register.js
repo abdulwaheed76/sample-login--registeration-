@@ -16,18 +16,21 @@ export default function Register() {
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
+        // input name Validation
         if(!userName.match(/^[a-zA-Z0-9_ ]*$/) ){
             toast('Invalid Name',{
                 position:toast.POSITION.TOP_CENTER,
                 autoClose:1000
               })
         }
+        // input email validation
         else if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
             toast('Invalid Email address',{
                 position:toast.POSITION.TOP_CENTER,
                 autoClose:1000
               })
         }
+        // input phone number validation
         else if(!phoneNumber.match(/^[0-9]+$/) ){
             toast('Invalid phone number',{
                 position:toast.POSITION.TOP_CENTER,
@@ -39,6 +42,7 @@ export default function Register() {
             position:toast.POSITION.TOP_CENTER,
             autoClose:1000
           })
+          // setting in local stroage
         localStorage.setItem("Email", JSON.stringify(email))
         localStorage.setItem("Password", JSON.stringify(password))
         dispatch(actions.addUser({
